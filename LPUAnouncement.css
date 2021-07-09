@@ -1,0 +1,121 @@
+.invisible{
+    display: none;
+}
+
+.ani{
+    animation-name: jinAnimation;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes jinAnimation {
+    0%{right: -50vw; top: 0;}
+    100%{right: 10vw; top: 0;}
+}
+.aniReverse{
+    animation-name: jinAnimationReverse;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes jinAnimationReverse {
+    0%{right: 10vw; top: 0;}
+    100%{right: -50vw; top: 0;}
+}
+
+.firstContainer{
+    animation-name: jin2Animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes jin2Animation {
+    0%{opacity: 1;}
+    100%{opacity: .1;}
+}
+.firstContainerReverse{
+    animation-name: jin2AnimationReverse;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes jin2AnimationReverse {
+    0%{opacity: .1;}
+    100%{opacity: 1;}
+}
+
+.hidden{
+    width: 100vw;
+    height: 100vh;
+}
+
+.topImage img{
+}
+.content{
+    margin: 0 10px 0 10px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.content::-webkit-scrollbar {
+    display: none;
+}
+.phi{
+    width: 35px;
+    height: 35px;
+    margin: 10px 10px 0 0;
+}
+.pli{
+    width: 35px;
+    height: 35px;
+    margin: 0 4px 0 0;
+}
+.ph{
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.pl{
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;}
+.p{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.bottomImage{
+}
+
+.z-2{
+    z-index: 2;
+}
+.z-3{
+    z-index: 3;
+}
+.pointr{
+    cursor: pointer;
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100px;
+    height: 80px;
+    color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.link{
+    word-wrap: break-word;
+}
+.linkLink{
+    width: 94%;
+    float: left;
+    margin:0;
+}
+.linkTxt{
+    width: 6%;
+    float: left;
+    margin:0;
+    margin-top: 0;
+    text-align: center;
+}
