@@ -69,18 +69,24 @@
     margin-top: 25px;
     margin-bottom: 0;
     font-family: 'Poppins', sans-serif;
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 1.4;
+
 }
 .pl{
     margin-top: 15px;
     margin-bottom: 0;
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
+        line-height: 1.4;
+
 }
 .p{
     margin: 0;
     font-family: 'Poppins', sans-serif;
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 1.4;
+
 
 }
 .bottomImage{
@@ -111,12 +117,18 @@
 
 .link{
     word-wrap: break-word;
+       text-decoration: none;
+    font-size: 14px;
+    color: rgb(21, 21, 138);
+    line-height: 1.4;
+    font-weight: normal;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: underline;
 }
 .linkLink{
     width: 94%;
     float: left;
     margin:0;
-        font-size: 15px;
 
 }
 .linkTxt{
@@ -127,4 +139,5 @@
     text-align: center;
         font-size: 15px;
 
+    font-family: 'Poppins', sans-serif;
 }
