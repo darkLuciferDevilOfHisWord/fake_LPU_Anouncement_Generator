@@ -160,6 +160,16 @@ if(formHeading.length > 0 && formDateTime.length > 0 && formContent.length > 0 &
 
     let content = document.getElementById('content');
     content.innerHTML = html;
+    
+    
+let topImg = document.getElementById('topImg');
+let bottomImgContainer = document.getElementById('bottomImgContainer');
+let topImgHeight = topImg.offsetHeight;
+// bottomImgContainer.setAttribute('style',`position:absolute; top:${screen.height - topImgHeight}`);
+
+let contentagain = document.getElementById('content');
+contentagain.style.height = (screen.height - (topImgHeight+topImgHeight+(topImgHeight/2)+bottomImgContainer.offsetHeight)) + 'px';
+
 }
 else{
     let msg = document.getElementById('msg');
@@ -175,15 +185,6 @@ linkHTML = '';
     x.preventDefault();
 }
 
-
-let topImg = document.getElementById('topImg');
-let bottomImgContainer = document.getElementById('bottomImgContainer');
-let topImgHeight = topImg.offsetHeight;
-// bottomImgContainer.setAttribute('style',`position:absolute; top:${screen.height - topImgHeight}`);
-
-let content = document.getElementById('content');
-content.style.height = (screen.height - (topImgHeight+topImgHeight+(topImgHeight/2)+bottomImgContainer.offsetHeight)) + 'px';
-console.log(topImg,topImg.offsetHeight,bottomImgContainer,bottomImgContainer.offsetHeight,content,content.offsetHeight,screen.height);
 
 let back = document.getElementById('back');
 back.addEventListener('click',function(){
