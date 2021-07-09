@@ -1,0 +1,137 @@
+.invisible{
+    display: none;
+}
+
+.ani{
+    animation-name: jinAnimation;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes jinAnimation {
+    0%{right: -50vw; top: 0;}
+    100%{right: 10vw; top: 0;}
+}
+.aniReverse{
+    animation-name: jinAnimationReverse;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes jinAnimationReverse {
+    0%{right: 10vw; top: 0;}
+    100%{right: -50vw; top: 0;}
+}
+
+.firstContainer{
+    animation-name: jin2Animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes jin2Animation {
+    0%{opacity: 1;}
+    100%{opacity: .1;}
+}
+.firstContainerReverse{
+    animation-name: jin2AnimationReverse;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes jin2AnimationReverse {
+    0%{opacity: .1;}
+    100%{opacity: 1;}
+}
+
+.hidden{
+    width: 100vw;
+    height: 100vh;
+}
+
+.topImage img{
+}
+.content{
+    margin: 0 10px 0 10px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.content::-webkit-scrollbar {
+    display: none;
+}
+.phi{
+    width: 35px;
+    height: 35px;
+    margin: 10px 10px 0 0;
+}
+.pli{
+    width: 35px;
+    height: 35px;
+    margin: 0 4px 0 0;
+}
+.ph{
+    margin-top: 27px;
+    line-height: 1.32;
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+.pl{
+    margin-top: 15px;
+    line-height: 1.3;
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+.p{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 400;
+
+}
+.bottomImage{
+}
+
+.z-2{
+    z-index: 2;
+}
+.z-3{
+    z-index: 3;
+}
+.pointr{
+    cursor: pointer;
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100px;
+    height: 80px;
+    color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.link{
+    font-size: 14px;
+    color: rgb(70, 17, 119);
+    line-height: 1.3;
+    font-weight: normal;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: underline;
+    width: 90vw;
+    word-wrap: break-word;
+    margin-bottom: 0;
+
+}
+.linkContainer{
+align-items: center;
+}
+.linkTxt{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin: 10px;
+    margin-bottom: 0;
+
+}
