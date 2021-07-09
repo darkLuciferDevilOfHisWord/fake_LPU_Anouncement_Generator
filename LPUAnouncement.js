@@ -81,6 +81,8 @@ function createAnouncement(x){
     let formAttachment3= document.getElementById('formAttachment3').value;
 
 if(formHeading.length > 0 && formDateTime.length > 0 && formContent.length > 0 && formBottom.length > 0){
+
+
     let body = document.getElementById('body');
     body.classList.remove('bg-dark');
     body.classList.remove('px-2');
@@ -113,23 +115,34 @@ if(formHeading.length > 0 && formDateTime.length > 0 && formContent.length > 0 &
 
 
     let link1 = '',link2 = '',link3 = '';
+    let linkHTML = '';
     let linkvar = 0;
+    if(formAttachment1.length>0 || formAttachment2.length>0 || formAttachment3.length>0){
+        linkHTML = `    <img class="float-start pli" src="icon2.jpg" alt="">
+        <p class='pl'><b>Attachment:</b><p/>`;
+    }
     if(formAttachment1.length>0){
         linkvar++;
         link1 = linkvar;
+        linkHTML += `
+        <p class="linkTxt">${link1}</p>
+        <p class="text-light linkLink"><a href="#" class="link">${formAttachment1}</a></p>`;
     }
     if(formAttachment2.length>0){
         linkvar++;
         link2 = linkvar;
+        linkHTML+= `
+        <p class="linkTxt">${link2}</p>
+        <p class="text-light linkLink"><a href="#" class="link">${formAttachment2}</a></p>`;
     }
     if(formAttachment3.length>0){
         linkvar++;
         link3 = linkvar;
+        linkHTML += `
+        <p class="linkTxt">${link3}</p>
+        <p class="text-light linkLink"><a href="#" class="link">${formAttachment3}</a></p>`;
     }
-    let linkHTML = '';
     if(linkvar > 0 ){
-        linkHTML = `    <img class="float-start pli" src="icon2.jpg" alt="">
-        <p class='pl'><b>Attachment:</b><p/>`;
     }
 
     let html = `
@@ -147,29 +160,24 @@ if(formHeading.length > 0 && formDateTime.length > 0 && formContent.length > 0 &
                 <p class="p">${strb}</p>
 
 
-<p>${linkHTML}
-<p class="linkTxt">${link1}</p>
-<p class="text-light linkLink"><a href="#" class="link">${formAttachment1}</a></p>
-<p class="linkTxt">${link2}</p>
-<p class="text-light linkLink"><a href="#" class="link">${formAttachment2}</a></p>
-<p class="linkTxt">${link3}</p>
-<p class="text-light linkLink"><a href="#" class="link">${formAttachment3}</a></p>
-</p>
+${linkHTML}
+
 
     `;
 
     let content = document.getElementById('content');
     content.innerHTML = html;
-    
-    
-let topImg = document.getElementById('topImg');
-let bottomImgContainer = document.getElementById('bottomImgContainer');
-let topImgHeight = topImg.offsetHeight;
-// bottomImgContainer.setAttribute('style',`position:absolute; top:${screen.height - topImgHeight}`);
 
-let contentagain = document.getElementById('content');
-contentagain.style.height = (screen.height - (topImgHeight+topImgHeight+(topImgHeight/2)+bottomImgContainer.offsetHeight)) + 'px';
-
+    let topImg = document.getElementById('topImg');
+    let bottomImgContainer = document.getElementById('bottomImgContainer');
+    let topImgHeight = topImg.offsetHeight;
+    // bottomImgContainer.setAttribute('style',`position:absolute; top:${screen.height - topImgHeight}`);
+    
+    let contentagain = document.getElementById('content');
+    contentagain.style.height = (screen.height - (topImgHeight+topImgHeight+(topImgHeight/2)+bottomImgContainer.offsetHeight)) + 'px';
+    
+    console.log(topImgHeight,contentagain.offsetHeight,bottomImgContainer.offsetHeight,screen.height)
+    
 }
 else{
     let msg = document.getElementById('msg');
@@ -184,6 +192,7 @@ linkvar = 0;
 linkHTML = '';
     x.preventDefault();
 }
+
 
 
 let back = document.getElementById('back');
